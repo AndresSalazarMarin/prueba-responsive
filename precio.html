@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title>Precios</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">
+</head>
+<body class="precio">
+	<header id="header" class="header background"> <!-- header -->
+		<div class="contenedor">
+			<figure class="logotipo"> <!-- logotipo -->
+				<img id="logo" src="img/invie.png" alt="Invie logotipo" />
+			</figure>
+			<span class="burguer-button icon-menu" id="burguer-button"></span>
+			<nav class="menu" id="menu"> <!-- menu -->
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#guitarras">Guitarras</a></li>
+					<li><a href="precios.html">Precios</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="table">
+		<div class="contenedor">
+			<table>
+				<thead>
+					<tr>
+						<th>Modelo</th>
+						<th>Precio</th>
+						<th>Descripción</th>
+						<th>Modelo</th>
+						<th>Precio</th>
+						<th>Descripción</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Invie Classic</td>
+						<td>$100 000</td>
+						<td>Una guitarra muy pro</td>
+						<td>Invie Classic</td>
+						<td>$100 000</td>
+						<td>Una guitarra muy pro</td>
+					</tr>
+					<tr>
+						<td>Invie Classic</td>
+						<td>$100 000</td>
+						<td>Una guitarra muy pro</td>
+						<td>Invie Classic</td>
+						<td>$100 000</td>
+						<td>Una guitarra muy pro</td>
+					</tr>
+					<tr>
+						<td>Invie Classic</td>
+						<td>$100 000</td>
+						<td>Una guitarra muy pro</td>
+						<td>Invie Classic</td>
+						<td>$100 000</td>
+						<td>Una guitarra muy pro</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="contenedor">
+			<div class="contacto">
+				<img src="img/invie-white.png" alt="Logotipo blanco">
+				<a href="tel:+573135737388"><strong>Teléfono</strong> <span>313 573 7388</span></a>
+				<a href="mailto:"><strong>E-mail</strong> <span>contacto@invie.com</span></a>
+			</div>
+			<form class="formulario">
+				<div class="col1">
+					<label for="nombre">Nombre</label>
+					<input type="text" name="nombre" id="nombre" required />
+					<label for="correo">Correo</label>
+					<input type="email" name="correo" id="correo" required />
+					<div class="sexo">
+						<label for="mujer">
+							<input type="radio" name="sexo" id="mujer" value="mujer"> Mujer
+						</label>
+						<label for="hombre">
+							<input type="radio" name="sexo" id="hombre" value="hombre"> Hombre
+						</label>
+					</div>
+					<div class="intereses">
+						<label for="cotizacion">
+							<input type="checkbox" name="intereses" id="cotizacion" value="cotizacion"> Cotización
+						</label>
+						<label for="reclamos">
+							<input type="checkbox" name="intereses" id="reclamos" value="reclamos"> Reclamos
+						</label>
+						<label for="comentarios">
+							<input type="checkbox" name="intereses" id="comentarios" value="comentarios"> Comentarios
+						</label>
+						<label for="otros">
+							<input type="checkbox" name="intereses" id="otros" value="otros"> Otros
+						</label>
+					</div>
+				</div>
+				<div class="col2">
+					<label for="comentario">Comentario</label>
+					<textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+					<input type="submit" value="Enviar" class="button">
+				</div>
+			</form>
+		</div>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+	<script type="text/javascript">
+		var consulta = window.matchMedia('(max-width: 500px)');
+		consulta.addListener(mediaQuery);
+
+		var $burguerButton = document.getElementById("burguer-button");
+		var $menu = document.getElementById("menu");
+
+		function toggleMenu(){
+			$menu.classList.toggle("active");
+		}
+
+		function mediaQuery(){
+			if (consulta.matches){
+				$burguerButton.addEventListener("touchstart", toggleMenu);
+			}else{
+				$burguerButton.removeEventListener("touchstart", toggleMenu);	
+			}
+		}
+
+		mediaQuery();
+
+		var blazy = new Blazy({
+			selector: 'img'
+		});
+
+	</script>
+</body>
+</html>
