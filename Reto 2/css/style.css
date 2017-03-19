@@ -1,0 +1,36 @@
+body{
+	background: gray;
+	font-family: Arial;
+}
+img{
+	width: 700px;
+	transition: 3s;
+	opacity: 0;
+	object-fit: cover;
+	width: 100%;
+	/*position: relative;
+	left: -40%;*/
+	transform: rotate(360deg);
+}
+
+img.b-loaded{
+	opacity: 1;
+	/*left: 0;*/
+	transform: rotate(0deg);
+}
+
+figure{
+	overflow: hidden;
+	border: 10px solid red;
+	background-image: url('../img/rolling.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	max-width: 700px;
+	margin: 0 auto;
+}
+figcaption{
+	background: white;
+	font-size: 18px;
+	padding: 15px 10px;
+	border-bottom: 5px solid lightgray;
+}
